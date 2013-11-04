@@ -1,0 +1,11 @@
+nextverseid: 451
+
+adicionar login
+
+criar uma feature durante a inicialização do produto (primeira vez que o usuário usa) que calculará quantas palavras ele lê por minuto (utilizar alguns versículos randômicos). depois do calculo, o 
+sistema irá mostrar quantas palavras ele leu por minuto. dará a opção do usuário ler novamente, para recalcular, e assim por diante. até que o usuário "confirme". recomendar sempre uma quantidade um pouco
+menor de palavras, para que o sistema nao avance antes do usuário ter terminado.
+
+manter dados ainda que o programa trave (queda de energia, bug, etc), para que o sistema não perca o histórico da sessão atual
+
+auto-updated software

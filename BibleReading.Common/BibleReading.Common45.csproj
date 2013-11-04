@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1A7B1A16-F86E-4883-B756-CB3A8457565D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BibleReading.Common45</RootNamespace>
+    <AssemblyName>BibleReading.Common45</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>BibleReading.Common45.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Root\ByteExtension.cs" />
+    <Compile Include="Root\Collections\Generic\IEnumerableExtensions.cs" />
+    <Compile Include="Root\Data\SqlClient\BusinessBase.cs" />
+    <Compile Include="Root\Data\SqlClient\DataRowFW\BaseDB.cs" />
+    <Compile Include="Root\Data\Nullable\INullableReader.cs" />
+    <Compile Include="Root\Data\Nullable\NullableDataReader.cs" />
+    <Compile Include="Root\Data\Nullable\NullableDataRowReader.cs" />
+    <Compile Include="Root\Data\SqlClient\UtilDB.cs" />
+    <Compile Include="Root\Diagnostics\Logging\LoggerUtility.cs" />
+    <Compile Include="Root\IO\DirectoryExtension.cs" />
+    <Compile Include="Root\IO\FileInfoExtension.cs" />
+    <Compile Include="Root\IO\StreamWriterUtility.cs" />
+    <Compile Include="Root\Net\AcceptAllCertificatePolicy.cs" />
+    <Compile Include="Root\Net\Mail\MailInfo.cs" />
+    <Compile Include="Root\Net\Mail\SendMail.cs" />
+    <Compile Include="Root\Net\ProxyUtility.cs" />
+    <Compile Include="Root\ObjectExtension.cs" />
+    <Compile Include="Root\ObjectUtility.cs" />
+    <Compile Include="Root\Reflection\ObjectCopier.cs" />
+    <Compile Include="Root\Reflection\ReflectionExtension.cs" />
+    <Compile Include="Root\Reports\ReportViewer\Web\ReportViewerWebUtility.cs" />
+    <Compile Include="Root\Reports\ReportViewer\Windows\ReportViewerWinUtility.cs" />
+    <Compile Include="Root\Web\HttpContextExtension.cs" />
+    <Compile Include="Root\Web\License\AcceptAllCertificatePolicy.cs" />
+    <Compile Include="Root\Web\License\CryptDataSet.cs" />
+    <Compile Include="Root\Security\Cryptography\CryptUtil.cs" />
+    <Compile Include="Root\Security\Cryptography\SymmetricCryptography.cs" />
+    <Compile Include="Root\StringExtension.cs" />
+    <Compile Include="Root\Diagnostics\ProcessUtility.cs" />
+    <Compile Include="Root\EnumUtility.cs" />
+    <Compile Include="Root\NullableTryParse.cs" />
+    <Compile Include="Root\Data\Transactions\TransactionScopeUtility.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Root\MSOffice\ExcelUtility.cs" />
+    <Compile Include="Root\Web\License\LicenseGear.cs" />
+    <Compile Include="Root\Web\License\LicenseInfo.cs" />
+    <Compile Include="Root\Web\License\LicenseModule.cs" />
+    <Compile Include="Root\Web\License\Configuration\ConfigurationHelper.cs" />
+    <Compile Include="Root\Web\License\Configuration\LicenseGroup.cs" />
+    <Compile Include="Root\Web\License\Configuration\LicenseSection.cs" />
+    <Compile Include="Root\Web\License\LicenseValidation.cs" />
+    <Compile Include="Root\Web\License\ScriptMethod.cs" />
+    <Compile Include="Root\Web\Security\AuthenticationUtility.cs" />
+    <Compile Include="Root\Web\UI\ControlExtension.cs" />
+    <Compile Include="Root\Web\UI\WebControls\GridViewExtension.cs" />
+    <Compile Include="Root\Xml\Serialization\SerializableDictionary.cs" />
+    <Compile Include="Root\Xml\Serialization\SerializationExtension.cs" />
+    <Compile Include="Root\Xml\Serialization\XmlSerializerUtility.cs" />
+    <Compile Include="Web References\wsLicense\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BibleReading.Common45.snk" />
+    <None Include="Web References\wsLicense\License.wsdl" />
+    <None Include="Web References\wsLicense\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost/AgroERP_WS/License.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsLicense\</RelPath>
+      <UpdateFromURL>http://localhost/AgroERP_WS/License.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>SevenFast_Common35_wsLicense_License</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\wsLicense\License.disco" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
