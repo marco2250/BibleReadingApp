@@ -1,4 +1,6 @@
-﻿namespace BibleReading.Model
+﻿// This enum contains all bible's books
+
+namespace BibleReading.Model
 {
     public enum BookEnum
     {
