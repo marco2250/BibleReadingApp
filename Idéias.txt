@@ -9,3 +9,5 @@ menor de palavras, para que o sistema nao avance antes do usuário ter terminado
 manter dados ainda que o programa trave (queda de energia, bug, etc), para que o sistema não perca o histórico da sessão atual
 
 auto-updated software
+
+dar uma opção para o usuário marcar quais versículos deseja salvar para posterior estudo

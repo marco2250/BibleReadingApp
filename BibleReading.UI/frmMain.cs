@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
@@ -69,7 +70,7 @@ namespace BibleReading.UI
             }
         }
 
-        private Timer _tmrVerseReadingTime;
+        //private Timer _tmrVerseReadingTime;
         private Timer _tmrPlannedReadingTime;
 
         private int PlannedReadingTime { get; set; }
@@ -130,7 +131,7 @@ namespace BibleReading.UI
         {
             Verses = new List<DataRow>();
             _ci.NumberFormat.NumberDecimalDigits = 0;
-            PlannedReadingTime = 15;
+            PlannedReadingTime = int.Parse(ConfigurationManager.AppSettings["PlannedReadingTime"]);
 
             SetupControls();
             SetupTimer();
@@ -364,8 +365,8 @@ namespace BibleReading.UI
 
         private void SetupTimer()
         {
-            _tmrVerseReadingTime = new Timer();
-            _tmrVerseReadingTime.Tick += _tmrVerseReadingTime_Tick;
+            //_tmrVerseReadingTime = new Timer();
+            //_tmrVerseReadingTime.Tick += _tmrVerseReadingTime_Tick;
 
             _tmrPlannedReadingTime = new Timer();
             _tmrPlannedReadingTime.Interval = 50;
@@ -399,17 +400,17 @@ namespace BibleReading.UI
 
         void _tmrVerseReadingTime_Tick(object sender, EventArgs e)
         {
-            LoadNextVerse();
+            //LoadNextVerse();
         }
 
         private void StartTimer()
         {
-            _tmrVerseReadingTime.Start();
+            //_tmrVerseReadingTime.Start();
         }
 
         private void StopTimer()
         {
-            _tmrVerseReadingTime.Stop();
+            //_tmrVerseReadingTime.Stop();
         }
 
         //private void 
@@ -417,7 +418,7 @@ namespace BibleReading.UI
         private void UpdateInterval()
         {
             // Calcula o intervalo baseado na quantidade de palavras por minuto e na quantidade de palavras que o versículo possui
-            _tmrVerseReadingTime.Interval = 60 * CurrentVerse.Field<int>("WordCount") / User.Field<int>("WordsPerMinute") * 1000;
+            //_tmrVerseReadingTime.Interval = 60 * CurrentVerse.Field<int>("WordCount") / User.Field<int>("WordsPerMinute") * 1000;
         }
 
         private int CalculateWordsPerMinute()
